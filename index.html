@@ -1,221 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Premium Portfolio | K.G.RAHIM</title>
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K.G.RAHIM | Premium Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;500;800&display=swap');
+        
+        body {
+            background-color: #000;
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden;
+        }
 
-body{
-    background: linear-gradient(135deg,#0f0f0f,#1a1a2e,#16213e);
-    color:white;
-    overflow-x:hidden;
-}
+        .hero-title {
+            font-family: 'Syncopate', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: -2px;
+        }
 
-header{
-    position:fixed;
-    width:100%;
-    top:0;
-    lef
-    padding:20px 8%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    backdrop-filter: blur(12px);
-    background: rgba(255,255,255,0.05);
-    z-index:1000;
-}
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+        }
 
-.logo{
-    font-size:28px;
-    font-weight:bold;
-    color:gold;
-}
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.07);
+            border-color: #38bdf8;
+            transform: translateY(-10px);
+        }
 
-nav a{
-    margin-left:25px;
-    text-decoration:none;
-    color:white;
-    transition:0.3s;
-}
+        .img-container {
+            overflow: hidden;
+            border-radius: 15px;
+        }
 
-nav a:hover{
-    color:gold;
-}
+        .img-container img {
+            transition: transform 0.8s ease;
+            filter: grayscale(40%);
+        }
 
-.hero{
-    min-height:100vh;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    text-align:center;
-    padding:100px 10%;
-}
+        .img-container:hover img {
+            transform: scale(1.1);
+            filter: grayscale(0%);
+        }
 
-.hero-content{
-    max-width:700px;
-}
-
-.hero h1{
-    font-size:60px;
-    margin-bottom:20px;
-}
-
-.hero span{
-    color:gold;
-}
-
-.hero p{
-    font-size:20px;
-    opacity:0.8;
-    margin-bottom:30px;
-}
-
-.btn{
-    padding:15px 35px;
-    border:none;
-    border-radius:30px;
-    background:gold;
-    color:black;
-    font-weight:bold;
-    cursor:pointer;
-    transition:0.3s;
-}
-
-.btn:hover{
-    transform:scale(1.05);
-}
-
-section{
-    padding:100px 10%;
-}
-
-.title{
-    font-size:40px;
-    margin-bottom:40px;
-    text-align:center;
-    color:gold;
-}
-
-.cards{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:25px;
-}
-
-.card{
-    background: rgba(255,255,255,0.08);
-    padding:25px;
-    border-radius:20px;
-    backdrop-filter: blur(10px);
-    box-shadow:0 8px 20px rgba(0,0,0,0.3);
-    transition:0.4s;
-}
-
-.card:hover{
-    transform:translateY(-10px);
-}
-
-.skills-list{
-    display:flex;
-    flex-wrap:wrap;
-    gap:15px;
-    justify-content:center;
-}
-
-.skill{
-    padding:12px 20px;
-    background: rgba(255,255,255,0.08);
-    border-radius:25px;
-}
-
-footer{
-    text-align:center;
-    padding:30px;
-    background:#000;
-    margin-top:50px;
-}
-</style>
+        .glow-text {
+            text-shadow: 0 0 20px rgba(56, 189, 248, 0.5);
+        }
+    </style>
 </head>
-<body>
+<body class="p-4 md:p-10">
 
-<header>
-    <div class="logo">K.G.RAHIM</div>
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
+    <nav class="flex justify-between items-center mb-20">
+        <div class="text-2xl font-bold hero-title glow-text">K.G.RAHIM<span class="text-sky-500">.</span></div>
+        <div class="space-x-6 text-sm uppercase tracking-widest text-gray-400">
+            <a href="#" class="hover:text-sky-400 transition">Works</a>
+            <a href="#" class="hover:text-sky-400 transition">About</a>
+        </div>
     </nav>
-</header>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>Hello, I'm <span>K.G.RAHIM</span></h1>
-        <p>Developer | Student | Designer | Creator</p>
-        <button class="btn">View Portfolio</button>
-    </div>
-</section>
+    <header class="mb-20">
+        <h1 class="text-6xl md:text-9xl font-bold hero-title leading-none">
+            DIGITAL <br> <span class="text-sky-500">CREATOR</span>
+        </h1>
+        <p class="mt-6 text-gray-500 max-w-md text-lg italic">"Capturing reality through a premium lens. Tech enthusiast & student at JNV Jamtara."</p>
+    </header>
 
-<section id="about">
-    <h2 class="title">About Me</h2>
-    <div class="card">
-        <p>
-            I am passionate about coding, web design, study growth,
-            and creating premium digital experiences.
-            I focus on consistency, creativity, and professional development.
-        </p>
-    </div>
-</section>
-
-<section id="projects">
-    <h2 class="title">Projects</h2>
-    <div class="cards">
-        <div class="card">
-            <h3>3D Dhoni Trophy Reel</h3>
-            <p>Premium animated cricket-themed design project.</p>
+    <div class="grid grid-cols-1 md:grid-cols-12 gap-6 mb-20">
+        
+        <div class="md:col-span-7 glass-card p-4 rounded-3xl">
+            <div class="img-container h-[500px]">
+                <img src="hero.jpg" class="w-full h-full object-cover" alt="Main Style">
+            </div>
+            <div class="mt-4 flex justify-between items-center px-2">
+                <span class="text-sky-400 font-bold uppercase tracking-widest text-xs">Featured Look</span>
+                <span class="text-gray-500 text-xs">2026 Edition</span>
+            </div>
         </div>
-        <div class="card">
-            <h3>JEE Study Tracker</h3>
-            <p>Daily productivity and consistency planner.</p>
+
+        <div class="md:col-span-5 glass-card p-4 rounded-3xl">
+            <div class="img-container h-[500px]">
+                <img src="school.jpg" class="w-full h-full object-cover" alt="Formal">
+            </div>
+            <div class="mt-4 px-2">
+                <h3 class="font-bold text-xl">The Professional</h3>
+                <p class="text-gray-500 text-sm">Navodaya Spirit</p>
+            </div>
         </div>
-        <div class="card">
-            <h3>Portfolio Website</h3>
-            <p>Modern glassmorphism responsive design.</p>
+
+        <div class="md:col-span-4 glass-card p-3 rounded-2xl">
+            <div class="img-container h-80">
+                <img src="river.jpg" class="w-full h-full object-cover" alt="Portrait">
+            </div>
+        </div>
+
+        <div class="md:col-span-4 glass-card p-3 rounded-2xl">
+            <div class="img-container h-80">
+                <img src="hero2.jpg" class="w-full h-full object-cover" alt="Profile">
+            </div>
+        </div>
+
+        <div class="md:col-span-4 glass-card p-3 rounded-2xl">
+            <div class="img-container h-80">
+                <img src="red.jpg" class="w-full h-full object-cover" alt="Campus">
+            </div>
         </div>
     </div>
-</section>
 
-<section id="skills">
-    <h2 class="title">Skills</h2>
-    <div class="skills-list">
-        <div class="skill">HTML</div>
-        <div class="skill">CSS</div>
-        <div class="skill">JavaScript</div>
-        <div class="skill">UI Design</div>
-        <div class="skill">Problem Solving</div>
-        <div class="skill">JEE Preparation</div>
-    </div>
-</section>
-
-<section id="contact">
-    <h2 class="title">Contact</h2>
-    <div class="card">
-        <p>Email: yourmail@example.com</p>
-        <p>Instagram: @yourusername</p>
-        <p>GitHub: github.com/yourname</p>
-    </div>
-</section>
-
-<footer>
-    © 2026 K.G.RAHIM | Premium Portfolio
-</footer>
+    <footer class="border-t border-white/10 pt-10 grid md:grid-cols-2 gap-10">
+        <div>
+            <h4 class="hero-title text-2xl mb-4">Contact <span class="text-sky-500">Me</span></h4>
+            <p class="text-gray-400">Class 11th 'A' | Jawahar Navodaya Vidyalaya<br>Instagram: rahim_bhai13</p>
+        </div>
+        <div class="flex items-end justify-start md:justify-end space-x-8">
+            <span class="text-sm text-gray-600">© 2026 K.G.RAHIM</span>
+            <span class="text-sky-500 font-bold tracking-widest">DESIGNED FOR EXCELLENCE</span>
+        </div>
+    </footer>
 
 </body>
 </html>
